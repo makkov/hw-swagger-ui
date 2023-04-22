@@ -6,7 +6,7 @@ import ru.hogwarts.school.model.FacultyCreationRequest;
 import ru.hogwarts.school.model.FacultyUpdatingRequest;
 import ru.hogwarts.school.service.FacultyService;
 
-import java.util.Map;
+import java.util.List;
 
 @RestController
 @RequestMapping("/faculty")
@@ -24,7 +24,7 @@ public class FacultyController {
     }
 
     @GetMapping("/getAll")
-    public Map<Long, Faculty> getAll() {
+    public List<Faculty> getAll() {
         return facultyService.getAll();
     }
 
