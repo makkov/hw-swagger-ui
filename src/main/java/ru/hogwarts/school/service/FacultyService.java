@@ -18,7 +18,7 @@ public class FacultyService {
 
     public Faculty add(String name, String color) {
         Faculty newFaculty = new Faculty(name, color);
-        facultyRepository.save(newFaculty);
+        newFaculty = facultyRepository.save(newFaculty);
         return newFaculty;
     }
 
